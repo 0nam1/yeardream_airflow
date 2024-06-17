@@ -19,9 +19,4 @@ with DAG(
         python_callable=select_fruit
     )
 
-    py_t2 = PythonOperator(
-        task_id='py_t2',
-        python_callable=select_fruit
-    )
-
     py_t1
