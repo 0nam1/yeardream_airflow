@@ -19,7 +19,7 @@ with DAG(
     trigger_dag_task = TriggerDagRunOperator(
         task_id='trigger_dag_task',
         trigger_dag_id='dags_python_operator',
-        trigger_run_id=None,
+        trigger_run_id='태슬라가즈아',
         logical_date='{{ execution_date }}',
         reset_dag_run=True,
         wait_for_completion=False,
