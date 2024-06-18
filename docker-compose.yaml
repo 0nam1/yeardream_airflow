@@ -122,10 +122,10 @@ services:
       start_period: 5s
     restart: always
     ports:
-  - 5432:5432
-  networks:
-    network_custom:
-      ipv4_address: 172.28.0.4
+      - 5432:5432
+    networks:
+      network_custom:
+        ipv4_address: 172.28.0.4
 
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
