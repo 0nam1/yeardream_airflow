@@ -122,7 +122,7 @@ services:
       start_period: 5s
     restart: always
     ports:
-      - 5432:5432
+      - 5431:5432
     networks:
       network_custom:
         ipv4_address: 172.28.0.4
