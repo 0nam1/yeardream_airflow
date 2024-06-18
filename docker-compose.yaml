@@ -96,12 +96,7 @@ services:
   postgres_custom:
     image: postgres:13
     env_file:
-      - postgres.env
-    # environment:
-    #   POSTGRES_USER: jeon
-    #   POSTGRES_PASSWORD: jeon
-    #   POSTGRES_DB: jeon
-    #   TZ: Asia/Seoul
+      - postgres_custom.env
     volumes:
       - postgres-db-volume_custom:/var/lib/postgresql/data
     ports:
@@ -112,10 +107,8 @@ services:
 
   postgres:
     image: postgres:13
-    environment:
-      POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
-      POSTGRES_DB: airflow
+    env_file:
+      - postgres.env
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
     healthcheck:
