@@ -1,4 +1,3 @@
-
 from airflow import DAG
 import pendulum
 from airflow.operators.python import PythonOperator
