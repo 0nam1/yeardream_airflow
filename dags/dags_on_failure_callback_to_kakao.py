@@ -2,7 +2,7 @@ from airflow import DAG
 from airflow.operators.bash import BashOperator
 from datetime import timedelta
 import pendulum
-from callbacks.on_failure_callback_to_kakao import on_failure_callback_to_kakao
+from callbacks.on_failure_callback_to_kakao import on_failure_callback_to_kakao 
 
 
 with DAG(
