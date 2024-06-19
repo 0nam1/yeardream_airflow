@@ -9,7 +9,7 @@ with DAG(
     catchup=False
 ) as dag:
     # 서울시 행정동별 대중교통 총 승차 승객수 정보 (https://data.seoul.go.kr/dataList/OA-21223/S/1/datasetView.do)
-    sensor__tpss_passenger_cnt = SeoulApiDateColumnSensor(
+    sensor__tpss_passenger_cnt = SeoulApiDateSensor(
         task_id='sensor__tpss_passenger_cnt',
         dataset_nm='tpssPassengerCnt',
         base_dt_col='CRTR_DT',
@@ -18,7 +18,7 @@ with DAG(
     )
 
     # 한강공원 주차장 일별 이용현황 (https://data.seoul.go.kr/dataList/OA-21084/S/1/datasetView.do)
-    sensor__tb_use_day_status_view = SeoulApiDateColumnSensor(
+    sensor__tb_use_day_status_view = SeoulApiDateSensor(
         task_id='sensor__tb_use_day_status_view',
         dataset_nm='TbUseDaystatusView',
         base_dt_col='DT',
